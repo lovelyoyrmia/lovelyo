@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/color-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="logo">
+            <a href="index.html">W</a>
+          </div>
+          <div class="hamburger-btn outer-shadow hover-in-shadow" id="navbar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation menu -->
+    <nav class="nav-menu" id="nav-menu">
+      <!-- <div class="close-nav-menu outer-shadow hover-in-shadow" id="closenavbar">
+        &times;
+      </div> -->
+      <div class="nav-menu-inner">
+        <ul>
+          <li><a href="#" class="inner-shadow active">Home</a></li>
+          <li><a href="#" class="outer-shadow hover-in-shadow">About Me</a></li>
+          <li><a href="#" class="outer-shadow hover-in-shadow">Services</a></li>
+          <li>
+            <a href="#" class="outer-shadow hover-in-shadow">Portfolio</a>
+          </li>
+          <li><a href="#" class="outer-shadow hover-in-shadow">Projects</a></li>
+          <li><a href="#" class="outer-shadow hover-in-shadow">Contact</a></li>
+        </ul>
+      </div>
+      <p class="copyright-text">&copy; 2022 Lovelyo Yeremia</p>
+    </nav>
+    <section id="home" class="home-section section">
+      <!-- EFFECT WRAP -->
+      <div class="effect-wrap">
+        <div class="effect effect-1"></div>
+        <div class="effect effect-2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="effect effect-3"></div>
+      </div>
+      <!-- CONTENT -->
+      <div class="container">
+        <dvi class="row full-screen align-items-center">
+          <div class="home-img">
+            <div class="img-box inner-shadow">
+              <img src="img/vio.jpg" alt="profile-pic" />
+            </div>
+          </div>
+          <div class="home-text">
+            <p>Hello !!!</p>
+            <h2>I'm Lovelyo Yeremia</h2>
+            <h1>Student & Machine Learning Enthusiast</h1>
+            <a href="#about" class="btn-1 outer-shadow hover-in-shadow"
+              >More about me</a
+            >
+          </div>
+        </dvi>
+      </div>
+      <div></div>
+    </section>
+
+    <!-- SECTION ABOUT -->
+    <section id="about" class="about-section section">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 data-heading="main info">About Me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="about-info">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              similique quidem nostrum fugit ea veniam, velit itaque impedit
+              iure ratione reiciendis obcaecati harum in laboriosam veritatis,
+              quas, dolorem doloremque mollitia.
+            </p>
+            <a
+              href="CV_Lovelyo_Yeremia.pdf"
+              class="btn-1 outer-shadow hover-in-shadow"
+              >Download CV</a
+            >
+            <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+          </div>
+          <div class="about-img">
+            <div class="img-box inner-shadow">
+              <img src="img/vio.jpg" alt="profile-pic" />
+            </div>
+            <div class="social-links">
+              <a href="#" class="btn-1 outer-shadow hover-in-shadow"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#" class="btn-1 outer-shadow hover-in-shadow"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="btn-1 outer-shadow hover-in-shadow"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#navbar").click(function () {
+        $(".nav-menu").toggleClass("show");
+      });
+      $("#closenavbar").click(function () {
+        $(".nav-menu").removeClass("show");
+      });
+    });
+  </script>
+</html>
