@@ -35,7 +35,6 @@
   const prevBtn = document.querySelector(".pp-prev");
   const nextBtn = document.querySelector(".pp-next");
   const closeBtn = document.querySelector(".pp-close");
-  const projectDetailsContainer = document.querySelector(".pp-details");
 
   let itemIndex, slideIndex, screenshot;
 
@@ -123,6 +122,8 @@
     popupImg.onload = () => {
       popup.querySelector(".pp-loader").classList.remove("active");
     };
+    popup.querySelector(".pp-counter").innerHTML =
+      slideIndex + 1 + " of " + screenshot.length;
   }
 
   nextBtn.addEventListener("click", () => {
@@ -132,7 +133,6 @@
       slideIndex++;
     }
     popupSlideshow();
-    console.log("slide index:" + slideIndex);
   });
 
   prevBtn.addEventListener("click", () => {
@@ -142,6 +142,5 @@
       slideIndex--;
     }
     popupSlideshow();
-    console.log("slide index:" + slideIndex);
   });
 })();
