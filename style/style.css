@@ -7,6 +7,7 @@ Global Style
   --bg-black-900: #000000;
   --bg-black-100: #dddddd;
   --bg-black-50: #eff0f4;
+  --bg-opacity: rgba(255, 255, 255, 0.5);
   --text-black-900: #000000;
   --text-black-700: #555555;
   --text-black-600: #666666;
@@ -14,6 +15,7 @@ Global Style
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
   --inner-shadow: inset 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 * {
   margin: 0;
@@ -37,6 +39,9 @@ body {
   line-height: 1.5;
   /* overflow-x: hidden; */
   background-color: var(--bg-black-50);
+}
+body.stop-scrolling {
+  overflow-y: hidden;
 }
 
 a {
