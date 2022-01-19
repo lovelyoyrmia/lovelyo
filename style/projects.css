@@ -281,3 +281,10 @@ PROJECT POPUP
 .project-popup .info ul li span {
   font-weight: 400;
 }
+
+.project-popup .pp-counter {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 20px;
+}
