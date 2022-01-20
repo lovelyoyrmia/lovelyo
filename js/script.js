@@ -1,4 +1,64 @@
-// about section tab
+// NAVIGATION MENU
+
+(() => {
+  const hamburgerBtn = document.querySelector(".hamburger-btn");
+  const navMenu = document.querySelector(".nav-menu");
+  const closeNav = navMenu.querySelector(".close-nav-menu");
+
+  hamburgerBtn.addEventListener("click", showNavMenu);
+  closeNav.addEventListener("click", hideNavMenu);
+  function showNavMenu() {
+    navMenu.classList.add("open");
+  }
+  function hideNavMenu() {
+    navMenu.classList.remove("open");
+    fadeOutEffect();
+    bodyScrollingToggle();
+  }
+  function fadeOutEffect() {
+    document.querySelector(".fade-out-effect").classList.add("active");
+    setTimeout(() => {
+      document.querySelector(".fade-out-effect").classList.remove("active");
+    }, 300);
+  }
+
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("link-item")) {
+      if (event.target.hash !== "") {
+        event.preventDefault();
+        const hash = event.target.hash;
+        document.querySelector(".section.active").classList.add("hide");
+        document.querySelector(".section.active").classList.remove("active");
+        document.querySelector(hash).classList.add("active");
+        document.querySelector(hash).classList.remove("hide");
+        navMenu
+          .querySelector(".active")
+          .classList.add("outer-shadow", "hover-in-shadow");
+        navMenu
+          .querySelector(".active")
+          .classList.remove("active", "inner-shadow");
+
+        if (navMenu.classList.contains("open")) {
+          event.target.classList.add("active", "inner-shadow");
+          event.target.classList.remove("outer-shadow", "hover-in-shadow");
+          hideNavMenu();
+        } else {
+          let navItem = navMenu.querySelectorAll(".link-item");
+          navItem.forEach((item) => {
+            if (hash === item.hash) {
+              item.classList.add("active", "inner-shadow");
+              item.classList.remove("outer-shadow", "hover-in-shadow");
+            }
+          });
+          fadeOutEffect();
+        }
+        window.location.hash = hash;
+      }
+    }
+  });
+})();
+
+// ABOUT SECTION TAB
 (() => {
   const aboutSection = document.querySelector(".about-section");
   var tabsContainer = document.querySelector(".about-tabs");
@@ -21,9 +81,9 @@
   });
 })();
 
-// function bodyScrollingToggle() {
-//   document.body.classList.toggle("stop-scrolling");
-// }
+function bodyScrollingToggle() {
+  document.body.classList.toggle("stop-scrolling");
+}
 
 // portfolio filer and popup
 
@@ -142,5 +202,62 @@
       slideIndex--;
     }
     popupSlideshow();
+  });
+})();
+
+// User ID
+// user_g3cqWH8EbvclEe2pkBZA9
+// Access Token
+// c56b3b0a8a7574a6ed46f49250fc2ec3
+
+// SEND EMAIL
+
+(() => {
+  let name = document.querySelector(".name");
+  let email = document.querySelector(".email");
+  let message = document.querySelector(".message");
+  let submit = document.querySelector(".submit");
+
+  submit.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (name.value === "" || email.value === "" || message.value === "") {
+      errorMessage();
+    } else {
+      sendEmail();
+    }
+  });
+  function sendEmail() {
+    emailjs.send("service_96qi7vo", "template_glk9wge", {
+      from_name: name.value,
+      to_name: "Vio",
+      message: message.value,
+      from_email: email.value,
+      to_email: "viomokalu@gmail.com",
+    });
+    success();
+  }
+  function success() {
+    swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+    });
+  }
+  function errorMessage() {
+    swal({
+      title: "I am sorry :(",
+      text: "Something went wrong, message could not be sent !",
+    });
+  }
+})();
+
+// HIDE ALL SECTIONS
+(() => {
+  const sections = document.querySelectorAll(".section");
+
+  sections.forEach((section) => {
+    if (!section.classList.contains("active")) {
+      section.classList.add("hide");
+    }
   });
 })();
