@@ -33,24 +33,19 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
-
   .about-section .about-info {
     order: 2;
   }
-
   .home-section .home-text {
     text-align: center;
   }
-
   .home-section .full-screen {
     padding: 100px 0;
   }
-
   .home-section .home-img .img-box {
     margin-bottom: 40px;
     max-width: 350px;
   }
-
   .about-section .about-img {
     margin-bottom: 20px;
   }

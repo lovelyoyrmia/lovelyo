@@ -122,6 +122,8 @@ ABOUT
   flex: 0 50%;
   max-width: 50%;
   padding: 0 15px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .about-section .skills .skill-item p {
@@ -146,11 +148,11 @@ ABOUT
   border-radius: 10px;
 }
 
-.about-section .skills .skill-item .progress-bar span {
+.about-section .skills .skill-item span {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--text-black-600);
 }
