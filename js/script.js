@@ -13,7 +13,6 @@
   function hideNavMenu() {
     navMenu.classList.remove("open");
     fadeOutEffect();
-    bodyScrollingToggle();
   }
   function fadeOutEffect() {
     document.querySelector(".fade-out-effect").classList.add("active");
@@ -63,7 +62,7 @@
   const aboutSection = document.querySelector(".about-section");
   var tabsContainer = document.querySelector(".about-tabs");
 
-  tabsContainer.addEventListener("click", () => {
+  tabsContainer.addEventListener("click", (event) => {
     if (
       event.target.classList.contains("tab-item") &&
       !event.target.classList.contains("active")
@@ -81,13 +80,11 @@
   });
 })();
 
-function bodyScrollingToggle() {
-  document.body.classList.toggle("stop-scrolling");
-}
-
 // portfolio filer and popup
 
 (() => {
+  const header = document.querySelector(".header");
+  const projectSection = document.querySelector(".projects-section");
   const filterContainer = document.querySelector(".project-filter");
   const projectItemsContainer = document.querySelector(".project-items");
   const projectItems = document.querySelectorAll(".project-item");
@@ -95,6 +92,7 @@ function bodyScrollingToggle() {
   const prevBtn = document.querySelector(".pp-prev");
   const nextBtn = document.querySelector(".pp-next");
   const closeBtn = document.querySelector(".pp-close");
+  const disableClick = document.querySelector(".disable-clicking");
 
   let itemIndex, slideIndex, screenshot;
 
@@ -144,11 +142,13 @@ function bodyScrollingToggle() {
       popupToggle();
       popupSlideshow();
       popupDetails();
+      fixedBody();
     }
   });
 
   closeBtn.addEventListener("click", () => {
     popupToggle();
+    hiddenPopup();
   });
 
   function popupDetails() {
@@ -171,8 +171,25 @@ function bodyScrollingToggle() {
     );
   }
 
+  function fixedBody() {
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+  }
+
+  function hiddenPopup() {
+    const scrollY = document.body.style.top;
+    document.body.style.position = "";
+    document.body.style.top = "";
+    window.scrollTo(0, parseInt(scrollY || "0") * -1);
+  }
+
   function popupToggle() {
     popup.classList.toggle("open");
+    header.classList.toggle("is-blurred");
+    projectSection.classList.toggle("is-blurred");
+    disableClick.classList.toggle("active");
   }
   function popupSlideshow() {
     const imgSrc = screenshot[slideIndex];
@@ -204,13 +221,6 @@ function bodyScrollingToggle() {
     popupSlideshow();
   });
 })();
-
-// User ID
-// user_g3cqWH8EbvclEe2pkBZA9
-// Access Token
-// c56b3b0a8a7574a6ed46f49250fc2ec3
-
-// SEND EMAIL
 
 (() => {
   let name = document.querySelector(".name");
