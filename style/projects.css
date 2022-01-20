@@ -233,19 +233,20 @@ PROJECT POPUP
   right: 2%;
 }
 
-.project-popup .pp-prev,
-.project-popup .pp-next {
+.project-popup .pp-main .pp-prev,
+.project-popup .pp-main .pp-next {
   position: fixed;
   top: 50%;
-  height: 40px;
-  width: 40px;
+  width: 50px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
   z-index: 1010;
+  transform: translateY(-50%);
   color: var(--text-black-700);
   transition: all 0.3s ease;
   opacity: 0.4;
+  background-color: var(--bg-black-100);
 }
 
 .project-popup .pp-prev:hover,
