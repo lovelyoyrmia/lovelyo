@@ -114,17 +114,6 @@ ABOUT
   animation: fadeinTop 0.5s ease;
 }
 
-@keyframes fadeinTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
 .about-section .skills {
   padding: 0 0 40px;
 }
