@@ -239,8 +239,8 @@ function bodyScrollingToggle() {
   }
   function success() {
     swal({
-      title: "Good job!",
-      text: "You clicked the button!",
+      title: "Successfully sent :)",
+      text: `Hi ${name.value}, Looks like your message was successfully sent !`,
     });
   }
   function errorMessage() {
