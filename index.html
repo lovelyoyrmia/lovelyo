@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/service.css" />
     <link rel="stylesheet" href="style/projects.css" />
     <link rel="stylesheet" href="style/contact.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -20,11 +21,12 @@
     <title>Lovelyo Yeremia's Portfolio</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header">
       <div class="container">
         <div class="row justify-content-between">
           <div class="logo">
-            <a href="index.html">L</a>
+            <img src="img/logo.png" alt="logo" />
           </div>
           <div class="hamburger-btn outer-shadow hover-in-shadow" id="navbar">
             <span></span>
@@ -34,27 +36,43 @@
         </div>
       </div>
     </header>
-    <!-- Navigation menu -->
+    <!-- NAVIGATION MENU -->
     <nav class="nav-menu" id="nav-menu">
-      <!-- <div class="close-nav-menu outer-shadow hover-in-shadow" id="closenavbar">
+      <div class="close-nav-menu outer-shadow hover-in-shadow" id="closenavbar">
         &times;
-      </div> -->
+      </div>
       <div class="nav-menu-inner">
         <ul>
-          <li><a href="#" class="inner-shadow active">Home</a></li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">About Me</a></li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">Services</a></li>
           <li>
-            <a href="#" class="outer-shadow hover-in-shadow">Portfolio</a>
+            <a href="#home" class="link-item inner-shadow active">Home</a>
           </li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">Projects</a></li>
-          <li><a href="#" class="outer-shadow hover-in-shadow">Contact</a></li>
+          <li>
+            <a href="#about" class="link-item outer-shadow hover-in-shadow"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a href="#services" class="link-item outer-shadow hover-in-shadow"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="link-item outer-shadow hover-in-shadow"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="link-item outer-shadow hover-in-shadow"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
       <p class="copyright-text">&copy; 2022 Lovelyo Yeremia</p>
     </nav>
+    <div class="fade-out-effect"></div>
     <!-- SECTION HOME -->
-    <section id="home" class="home-section section">
+    <section id="home" class="home-section section active">
       <!-- EFFECT WRAP -->
       <div class="effect-wrap">
         <div class="effect effect-1"></div>
@@ -102,7 +120,9 @@
             <p>Hello !!!</p>
             <h2>I'm Lovelyo Yeremia</h2>
             <h1>Student & Machine Learning Enthusiast</h1>
-            <a href="#about" class="btn-1 outer-shadow hover-in-shadow"
+            <a
+              href="#about"
+              class="link-item btn-1 outer-shadow hover-in-shadow"
               >More about me</a
             >
           </div>
@@ -112,48 +132,17 @@
     </section>
     <!-- SECTION ABOUT -->
     <section id="about" class="about-section section">
-      <div class="about-effect-wrap">
-        <div class="effect effect-1"></div>
-        <div class="effect effect-2">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="effect effect-4"></div>
-      </div>
+      <!-- ABOUT CONTAINER -->
       <div class="container">
-        <!-- ABOUT SECTION -->
+        <!-- ABOUT TITLE -->
         <div class="row">
           <div class="section-title">
             <h2 data-heading="main info">About Me</h2>
           </div>
         </div>
+        <!-- MAIN ABOUT -->
         <div class="row">
+          <!-- ABOUT INFO -->
           <div class="about-info">
             <p>
               <span>Hi, I'm Lovelyo Yeremia Mokalu. </span>Undergraduate Student
@@ -172,12 +161,17 @@
             <a
               href="CV_Lovelyo_Yeremia.pdf"
               class="btn-1 outer-shadow hover-in-shadow"
+              target="_blank"
+              rel="noopener noreferrer"
               >Download CV</a
             >
-            <a href="#contact" class="btn-1 outer-shadow hover-in-shadow"
+            <a
+              href="#contact"
+              class="link-item btn-1 outer-shadow hover-in-shadow"
               >Hire Me</a
             >
           </div>
+          <!-- SOCIAL LINKS -->
           <div class="about-img">
             <div class="img-box inner-shadow">
               <img src="img/vio.jpg" alt="profile-pic" />
@@ -215,6 +209,7 @@
         <div class="row">
           <div class="skills tab-content active">
             <div class="row">
+              <!-- FUNDAMENTALS PYTHON -->
               <div class="skill-item">
                 <p>Fundamentals Python</p>
                 <div class="progress inner-shadow">
@@ -225,6 +220,7 @@
                 </div>
                 <span>95%</span>
               </div>
+              <!-- MACHINE LEARNING -->
               <div class="skill-item">
                 <p>Machine Learning</p>
                 <div class="progress inner-shadow">
@@ -238,6 +234,7 @@
             </div>
             <br />
             <div class="row">
+              <!-- COMPUTER VISION -->
               <div class="skill-item">
                 <p>Computer Vision</p>
                 <div class="progress inner-shadow">
@@ -248,6 +245,7 @@
                 </div>
                 <span>90%</span>
               </div>
+              <!-- SQL, NO SQL -->
               <div class="skill-item">
                 <p>SQL, No SQL</p>
                 <div class="progress inner-shadow">
@@ -261,6 +259,7 @@
             </div>
             <br />
             <div class="row">
+              <!-- REACT JS -->
               <div class="skill-item">
                 <p>React js</p>
                 <div class="progress inner-shadow">
@@ -271,6 +270,7 @@
                 </div>
                 <span>80%</span>
               </div>
+              <!-- HTML, CSS, JAVASCRIPT -->
               <div class="skill-item">
                 <p>HTML, CSS, Javascript</p>
                 <div class="progress inner-shadow">
@@ -290,6 +290,7 @@
             <div class="row">
               <div class="timeline">
                 <div class="center-line"></div>
+                <!-- EXPERIENCE 1 -->
                 <!-- ROW 1 -->
                 <div class="row row-1">
                   <!-- TIMELINE -->
@@ -307,6 +308,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- EXPERIENCE 2 -->
                 <!-- ROW 2 -->
                 <div class="row row-2">
                   <!-- TIMELINE -->
@@ -323,6 +325,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- EXPERIENCE 3 -->
                 <!-- ROW 1 -->
                 <div class="row row-1">
                   <!-- TIMELINE -->
@@ -349,6 +352,7 @@
             <div class="row">
               <div class="timeline">
                 <div class="center-line"></div>
+                <!-- EDUCATION 1 -->
                 <!-- ROW 1 -->
                 <div class="row row-1">
                   <!-- TIMELINE -->
@@ -362,6 +366,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- EDUCATION 2 -->
                 <!-- ROW 2 -->
                 <div class="row row-2">
                   <!-- TIMELINE -->
@@ -375,6 +380,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- EDUCATION 3 -->
                 <!-- ROW 1 -->
                 <div class="row row-1">
                   <!-- TIMELINE -->
@@ -394,8 +400,8 @@
         </div>
       </div>
     </section>
-    <!-- SECTION SERVICE -->
-    <section id="service" class="service-section section">
+    <!-- SECTION SERVICES -->
+    <section id="services" class="service-section section">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -403,6 +409,7 @@
           </div>
         </div>
         <div class="row">
+          <!-- MACHINE LEARNING ENGINEER -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
               <div class="icon inner-shadow">
@@ -414,6 +421,7 @@
               </p>
             </div>
           </div>
+          <!-- FULLSTACK DEVELOPER -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
               <div class="icon inner-shadow">
@@ -423,6 +431,7 @@
               <p>Building web application with python and express js.</p>
             </div>
           </div>
+          <!-- FRONTEND DEVELOPER -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
               <div class="icon inner-shadow">
@@ -435,6 +444,7 @@
               </p>
             </div>
           </div>
+          <!-- VIDEO EDITOR -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
               <div class="icon inner-shadow">
@@ -446,6 +456,7 @@
               </p>
             </div>
           </div>
+          <!-- PRODUCER -->
           <div class="service-item">
             <div class="service-item-inner outer-shadow">
               <div class="icon inner-shadow">
@@ -481,9 +492,9 @@
             <span class="filter-item" data-target="machine-learning"
               >machine learning
             </span>
-            <span class="filter-item" data-target="mobile-app"
+            <!-- <span class="filter-item" data-target="mobile-app"
               >mobile application</span
-            >
+            > -->
             <span class="filter-item" data-target="game">game</span>
             <span class="filter-item" data-target="others">others</span>
           </div>
@@ -538,7 +549,7 @@
                           ><a
                             href="https://bit.ly/3qupYOq"
                             target="_blank"
-                            rel="noopener noreferer"
+                            rel="noopener noreferrer"
                             >Click Here</a
                           ></span
                         >
@@ -591,7 +602,7 @@
                           ><a
                             href="https://bit.ly/342cG45"
                             target="_blank"
-                            rel="noopener noreferer"
+                            rel="noopener noreferrer"
                             >Click Here</a
                           ></span
                         >
@@ -639,7 +650,7 @@
                           ><a
                             href="https://bit.ly/3JQQjiL"
                             target="_blank"
-                            rel="noopener noreferer"
+                            rel="noopener noreferrer"
                             >Click Here</a
                           ></span
                         >
@@ -690,7 +701,7 @@
                           ><a
                             href="https://bit.ly/3ngEM2t"
                             target="_blank"
-                            rel="noopener noreferer"
+                            rel="noopener noreferrer"
                             >Click Here</a
                           ></span
                         >
@@ -732,7 +743,7 @@
                         Tools -
                         <span
                           >Python, Google Colab, Streamlit, OpenCV Python,
-                          Tensorflow</span
+                          Tensorflow.</span
                         >
                       </li>
                       <li>
@@ -741,7 +752,7 @@
                           ><a
                             href="https://bit.ly/3ezj2d8"
                             target="_blank"
-                            rel="noopener noreferer"
+                            rel="noopener noreferrer"
                             >Click Here</a
                           ></span
                         >
@@ -792,7 +803,255 @@
                           ><a
                             href="https://github.com/lovelyoyrmia/jarvis-voice-assistant"
                             target="_blank"
-                            rel="noopener noreferer"
+                            rel="noopener noreferrer"
+                            >Click Here</a
+                          ></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- START -->
+          <div class="project-item" data-category="web-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="img/projects/7.PNG"
+                  alt="imageProjects"
+                  data-screenshots="img/projects/7.PNG, 
+                  img/projects/7-1.PNG,
+                  img/projects/7-2.PNG"
+                />
+                <span class="view-project">view project</span>
+              </div>
+              <p class="project-item-title">Speech Recognition News</p>
+              <!-- PROJECT DETAILS -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Description</h3>
+                    <p>
+                      This website will help you search for recently News with
+                      speech recognition. Also you can search for different News
+                      based on categories, terms, and others.
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Info</h3>
+                    <ul>
+                      <li>Date - <span>2021</span></li>
+                      <li>
+                        Tools -
+                        <span
+                          >React Js, Alan Studio, News API, Firebase, Material
+                          UI.</span
+                        >
+                      </li>
+                      <li>
+                        Web -
+                        <span
+                          ><a
+                            href="https://alan-ai-app.web.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Click Here</a
+                          ></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- START -->
+          <div class="project-item" data-category="game">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="img/projects/8.PNG"
+                  alt="imageProjects"
+                  data-screenshots="img/projects/8.PNG, 
+                  img/projects/8-1.png,
+                  img/projects/8-2.PNG"
+                />
+                <span class="view-project">view project</span>
+              </div>
+              <p class="project-item-title">Flappy Bird Game Clone</p>
+              <!-- PROJECT DETAILS -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Description</h3>
+                    <p>
+                      Game that was inspired by flappy bird game on Android and
+                      i built this game to practice my knowledge in Javascript.
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Info</h3>
+                    <ul>
+                      <li>Date - <span>2021</span></li>
+                      <li>
+                        Tools -
+                        <span>HTML, CSS, Javascript, Firebase.</span>
+                      </li>
+                      <li>
+                        Web -
+                        <span
+                          ><a
+                            href="https://flappybird-lovelyo.web.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Click Here</a
+                          ></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- START -->
+          <div class="project-item" data-category="game">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="img/projects/9.PNG"
+                  alt="imageProjects"
+                  data-screenshots="img/projects/9.PNG, 
+                  img/projects/9-1.png,
+                  img/projects/9-2.PNG"
+                />
+                <span class="view-project">view project</span>
+              </div>
+              <p class="project-item-title">Dino Chrome Game Clone</p>
+              <!-- PROJECT DETAILS -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Description</h3>
+                    <p>
+                      Game that was inspired by Dino game on Google Chrome and i
+                      built this game to practice my knowledge in Javascript.
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Info</h3>
+                    <ul>
+                      <li>Date - <span>2021</span></li>
+                      <li>
+                        Tools -
+                        <span>HTML, CSS, Javascript, Firebase.</span>
+                      </li>
+                      <li>
+                        Web -
+                        <span
+                          ><a
+                            href="https://dinogame-lovelyo-29.web.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Click Here</a
+                          ></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- START -->
+          <div class="project-item" data-category="web-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="img/projects/10.PNG"
+                  alt="imageProjects"
+                  data-screenshots="img/projects/10.PNG, 
+                  img/projects/10-1.PNG"
+                />
+                <span class="view-project">view project</span>
+              </div>
+              <p class="project-item-title">Face Detection Js</p>
+              <!-- PROJECT DETAILS -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Description</h3>
+                    <p>
+                      One of React Js web application that i built to detect
+                      faces using Face-API Js. You can drag and drop photo that
+                      you want to detect.
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Info</h3>
+                    <ul>
+                      <li>Date - <span>2021</span></li>
+                      <li>
+                        Tools -
+                        <span>React Js, Face-API Js, Firebase.</span>
+                      </li>
+                      <li>
+                        Web -
+                        <span
+                          ><a
+                            href="https://face-detection-app-5eb0f.web.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Click Here</a
+                          ></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- START -->
+          <div class="project-item" data-category="web-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="img/projects/11.PNG"
+                  alt="imageProjects"
+                  data-screenshots="img/projects/11.PNG, 
+                  img/projects/11-1.PNG"
+                />
+                <span class="view-project">view project</span>
+              </div>
+              <p class="project-item-title">Covid Tracker</p>
+              <!-- PROJECT DETAILS -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Description</h3>
+                    <p>
+                      My first web application that i learned from youtube. This
+                      website can be tracking data Covid-19 in this world.
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Info</h3>
+                    <ul>
+                      <li>Date - <span>2021</span></li>
+                      <li>
+                        Tools -
+                        <span>React Js, Firebase.</span>
+                      </li>
+                      <li>
+                        Web -
+                        <span
+                          ><a
+                            href="https://covid-tracker-app-395e2.web.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             >Click Here</a
                           ></span
                         >
@@ -851,7 +1110,7 @@
                       name=""
                       id=""
                       placeholder="Name"
-                      class="input-control"
+                      class="input-control name"
                     />
                   </div>
                   <div class="input-group outer-shadow hover-in-shadow">
@@ -860,7 +1119,7 @@
                       name=""
                       id=""
                       placeholder="Email"
-                      class="input-control"
+                      class="input-control email"
                     />
                   </div>
                   <div class="input-group outer-shadow hover-in-shadow">
@@ -869,15 +1128,12 @@
                       id=""
                       cols="30"
                       rows="10"
-                      class="input-control"
+                      class="input-control message"
                       placeholder="Message"
                     ></textarea>
                   </div>
                   <div class="submit-btn">
-                    <button
-                      type="submit"
-                      class="btn-1 outer-shadow hover-in-shadow"
-                    >
+                    <button class="btn-1 outer-shadow hover-in-shadow submit">
                       Send Message
                     </button>
                   </div>
@@ -895,13 +1151,11 @@
                   </div>
                 </div>
               </div>
-              <div class="row"></div>
             </form>
           </div>
         </div>
       </div>
     </section>
-
     <!-- PROJECT POPUP -->
     <div class="pp project-popup outer-shadow">
       <div class="pp-main">
@@ -913,7 +1167,7 @@
         <div class="row">
           <div class="pp-main-inner">
             <img
-              src="img/projects/project1.PNG"
+              src="img/projects/1.PNG"
               alt="project1"
               class="pp-img outer-shadow"
             />
@@ -922,27 +1176,22 @@
             <div class="pp-project-details">
               <div class="row">
                 <div class="description">
-                  <h3>Lorem, ipsum.</h3>
+                  <h3>Image Processing</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Recusandae, facere quod laboriosam deleniti nemo excepturi
-                    saepe laudantium aliquam reiciendis delectus quidem facilis
-                    dolore reprehenderit architecto totam ullam iste. Expedita,
-                    nesciunt.
+                    This website will be able to process the image that you've
+                    uploaded such as contrast, brightness, blurring, and
+                    gray-scale. Also you can detect faces and smiles, and
+                    cartoonize your image.
                   </p>
                 </div>
                 <div class="info">
-                  <h3>Lorem, ipsum dolor.</h3>
+                  <h3>Info</h3>
                   <ul>
-                    <li>Date - <span>2020</span></li>
+                    <li>Date - <span>2021</span></li>
                     <li>Tools - <span>python</span></li>
                     <li>
                       Web -
-                      <span
-                        ><a href="#" target="_blank" rel="noopener noreferer"
-                          >www.image.com</a
-                        ></span
-                      >
+                      <span><a href="#">www.image.com</a></span>
                     </li>
                   </ul>
                 </div>
@@ -958,19 +1207,17 @@
         <div class="pp-counter">1 of 6</div>
       </div>
     </div>
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_g3cqWH8EbvclEe2pkBZA9");
+      })();
+    </script>
   </body>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#navbar").click(function () {
-        $(".nav-menu").toggleClass("show");
-      });
-      $("#closenavbar").click(function () {
-        $(".nav-menu").removeClass("show");
-      });
-    });
-  </script>
-  <script src="js/script.js"></script>
 </html>
