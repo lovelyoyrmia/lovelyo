@@ -80,145 +80,261 @@
   });
 })();
 
-// PORTFOLIO FILTER AND POPUP
+// FETCH PROJECTS SECTION
 (() => {
-  const header = document.querySelector(".header");
-  const projectSection = document.querySelector(".projects-section");
-  const filterContainer = document.querySelector(".project-filter");
-  const projectItemsContainer = document.querySelector(".project-items");
-  const projectItems = document.querySelectorAll(".project-item");
-  const popup = document.querySelector(".project-popup");
-  const prevBtn = document.querySelector(".pp-prev");
-  const nextBtn = document.querySelector(".pp-next");
-  const closeBtn = document.querySelector(".pp-close");
-  const disableClick = document.querySelector(".disable-clicking");
+  const projectItems = document.querySelector(".row.project-items");
 
-  let itemIndex, slideIndex, screenshot;
+  fetch("https://portfolio-vio.herokuapp.com/projects/")
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        alert(res.status);
+      }
+    })
+    .then((data) => {
+      const projectItem = [];
+      const projectItemInner = [];
+      const projectsItemImg = [];
+      const image = [];
+      const spanImage = [];
+      const projectItemTitle = [];
+      const projectItemDetails = [];
+      const row = [];
+      const divDesc = [];
+      const divDescTitle = [];
+      const divDescParagraph = [];
+      const divInfo = [];
+      const divInfoTitle = [];
+      const infoUl = [];
+      const infoLiTitle = [];
+      const infoSpan = [];
+      const infoLiTools = [];
+      const infoToolsSpan = [];
+      const infoLiLink = [];
+      const infoLinkSpan = [];
+      const infoLinkWeb = [];
 
-  filterContainer.addEventListener("click", (event) => {
-    if (
-      event.target.classList.contains("filter-item") &&
-      !event.target.classList.contains("active")
-    ) {
-      filterContainer
-        .querySelector(".active")
-        .classList.remove("outer-shadow", "active");
+      const lenProjects = data.projects.length;
 
-      event.target.classList.add("active", "outer-shadow");
-      const target = event.target.getAttribute("data-target");
-      projectItems.forEach((item) => {
-        if (target === item.getAttribute("data-category") || target === "all") {
-          item.classList.remove("hide");
-          item.classList.add("show");
-        } else {
-          item.classList.remove("show");
-          item.classList.add("hide");
+      for (let i = 0; i < lenProjects; i++) {
+        const dataProject = data.projects[i];
+        projectItem[i] = document.createElement("div");
+        projectItem[i].classList.add("project-item");
+        projectItem[i].setAttribute("data-category", dataProject["category"]);
+        projectItemInner[i] = document.createElement("div");
+        projectItemInner[i].classList.add("project-item-inner", "outer-shadow");
+        projectsItemImg[i] = document.createElement("div");
+        projectsItemImg[i].classList.add("project-item-img");
+        image[i] = document.createElement("img");
+        image[i].src = dataProject["image_path"];
+        image[i].alt = i.toString();
+        image[i].setAttribute(
+          "data-screenshots",
+          dataProject["image_list"].join(",")
+        );
+        spanImage[i] = document.createElement("span");
+        spanImage[i].classList.add("view-project");
+        spanImage[i].innerHTML = "view project";
+        projectItemTitle[i] = document.createElement("p");
+        projectItemTitle[i].classList.add("project-item-title");
+        projectItemTitle[i].innerHTML = dataProject["project_name"];
+        projectItemDetails[i] = document.createElement("div");
+        projectItemDetails[i].classList.add("project-item-details");
+        row[i] = document.createElement("div");
+        row[i].classList.add("row");
+        divDesc[i] = document.createElement("div");
+        divDesc[i].classList.add("description");
+        divDescTitle[i] = document.createElement("h3");
+        divDescTitle[i].innerHTML = "Description";
+        divDescParagraph[i] = document.createElement("p");
+        divDescParagraph[i].innerHTML = dataProject["description"];
+        divInfo[i] = document.createElement("div");
+        divInfo[i].classList.add("info");
+        divInfoTitle[i] = document.createElement("h3");
+        divInfoTitle[i].innerHTML = "Info";
+        infoUl[i] = document.createElement("ul");
+        infoLiTitle[i] = document.createElement("li");
+        infoSpan[i] = document.createElement("span");
+        infoSpan[i].innerHTML = dataProject["date"];
+        infoLiTitle[i].innerHTML = "Date - ";
+        infoLiTools[i] = document.createElement("li");
+        infoLiTools[i].innerHTML = "Tools - ";
+        infoToolsSpan[i] = document.createElement("span");
+        infoToolsSpan[i].innerHTML = dataProject["tools"];
+        infoLiLink[i] = document.createElement("li");
+        infoLiLink[i].innerHTML = "Web - ";
+        infoLinkSpan[i] = document.createElement("span");
+        infoLinkWeb[i] = document.createElement("a");
+        infoLinkWeb[i].href = dataProject["link_web"];
+        infoLinkWeb[i].target = "_blank";
+        infoLinkWeb[i].rel = "noopener noreferrer";
+        infoLinkWeb[i].innerHTML = "Click Here";
+
+        projectItems.appendChild(projectItem[i]);
+        projectItem[i].appendChild(projectItemInner[i]);
+        projectItemInner[i].appendChild(projectsItemImg[i]);
+        projectsItemImg[i].appendChild(image[i]);
+        projectsItemImg[i].appendChild(spanImage[i]);
+        projectItemInner[i].appendChild(projectItemTitle[i]);
+        projectItemInner[i].appendChild(projectItemDetails[i]);
+        projectItemDetails[i].appendChild(row[i]);
+        row[i].appendChild(divDesc[i]);
+        divDesc[i].appendChild(divDescTitle[i]);
+        divDesc[i].appendChild(divDescParagraph[i]);
+        row[i].appendChild(divInfo[i]);
+        divInfo[i].appendChild(divInfoTitle[i]);
+        divInfo[i].appendChild(infoUl[i]);
+        infoUl[i].appendChild(infoLiTitle[i]);
+        infoLiTitle[i].appendChild(infoSpan[i]);
+        infoUl[i].appendChild(infoLiTools[i]);
+        infoLiTools[i].appendChild(infoToolsSpan[i]);
+        infoUl[i].appendChild(infoLiLink[i]);
+        infoLiLink[i].appendChild(infoLinkSpan[i]);
+        infoLinkSpan[i].appendChild(infoLinkWeb[i]);
+      }
+
+      const header = document.querySelector(".header");
+      const projectSection = document.querySelector(".projects-section");
+      const filterContainer = document.querySelector(".project-filter");
+      const projectItemsContainer = document.querySelector(".project-items");
+      const project = document.querySelectorAll(".project-item");
+      const popup = document.querySelector(".project-popup");
+      const prevBtn = document.querySelector(".pp-prev");
+      const nextBtn = document.querySelector(".pp-next");
+      const closeBtn = document.querySelector(".pp-close");
+      const disableClick = document.querySelector(".disable-clicking");
+
+      let itemIndex, slideIndex, screenshot;
+
+      filterContainer.addEventListener("click", (event) => {
+        if (
+          event.target.classList.contains("filter-item") &&
+          !event.target.classList.contains("active")
+        ) {
+          filterContainer
+            .querySelector(".active")
+            .classList.remove("outer-shadow", "active");
+
+          event.target.classList.add("active", "outer-shadow");
+          const target = event.target.getAttribute("data-target");
+          project.forEach((item) => {
+            if (
+              target === item.getAttribute("data-category") ||
+              target === "all"
+            ) {
+              item.classList.remove("hide");
+              item.classList.add("show");
+            } else {
+              item.classList.remove("show");
+              item.classList.add("hide");
+            }
+          });
         }
       });
-    }
-  });
 
-  projectItemsContainer.addEventListener("click", (event) => {
-    if (event.target.closest(".project-item-inner")) {
-      const projectItem = event.target.closest(
-        ".project-item-inner"
-      ).parentElement;
-      itemIndex = Array.from(projectItem.parentElement.children).indexOf(
-        projectItem
-      );
-      screenshot = projectItems[itemIndex]
-        .querySelector(".project-item-img img")
-        .getAttribute("data-screenshots");
-      screenshot = screenshot.split(",");
-      if (screenshot.length === 1) {
-        prevBtn.style.display = "none";
-        nextBtn.style.display = "none";
-      } else {
-        prevBtn.style.display = "block";
-        nextBtn.style.display = "block";
+      projectItemsContainer.addEventListener("click", (event) => {
+        if (event.target.closest(".project-item-inner")) {
+          const projectItem = event.target.closest(
+            ".project-item-inner"
+          ).parentElement;
+          itemIndex = Array.from(projectItem.parentElement.children).indexOf(
+            projectItem
+          );
+          screenshot = project[itemIndex]
+            .querySelector(".project-item-img img")
+            .getAttribute("data-screenshots");
+          screenshot = screenshot.split(",");
+          if (screenshot.length === 1) {
+            prevBtn.style.display = "none";
+            nextBtn.style.display = "none";
+          } else {
+            prevBtn.style.display = "block";
+            nextBtn.style.display = "block";
+          }
+          slideIndex = 0;
+          popupToggle();
+          popupSlideshow();
+          popupDetails();
+          fixedBody();
+        }
+      });
+
+      closeBtn.addEventListener("click", () => {
+        popupToggle();
+        hiddenPopup();
+      });
+
+      function popupDetails() {
+        if (!project[itemIndex].querySelector(".project-item-details")) {
+          return;
+        }
+
+        const details = project[itemIndex].querySelector(
+          ".project-item-details"
+        ).innerHTML;
+        popup.querySelector(".pp-project-details").innerHTML = details;
+        const title = project[itemIndex].querySelector(
+          ".project-item-title"
+        ).innerHTML;
+        popup.querySelector(".pp-title h2").innerHTML = title;
+        const category = project[itemIndex].getAttribute("data-category");
+        popup.querySelector(".pp-title p span").innerHTML = category.replace(
+          "-",
+          " "
+        );
       }
-      slideIndex = 0;
-      popupToggle();
-      popupSlideshow();
-      popupDetails();
-      fixedBody();
-    }
-  });
 
-  closeBtn.addEventListener("click", () => {
-    popupToggle();
-    hiddenPopup();
-  });
+      function fixedBody() {
+        const scrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = "100%";
+      }
 
-  function popupDetails() {
-    if (!projectItems[itemIndex].querySelector(".project-item-details")) {
-      return;
-    }
+      function hiddenPopup() {
+        const scrollY = document.body.style.top;
+        document.body.style.position = "";
+        document.body.style.top = "";
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
 
-    const details = projectItems[itemIndex].querySelector(
-      ".project-item-details"
-    ).innerHTML;
-    popup.querySelector(".pp-project-details").innerHTML = details;
-    const title = projectItems[itemIndex].querySelector(
-      ".project-item-title"
-    ).innerHTML;
-    popup.querySelector(".pp-title h2").innerHTML = title;
-    const category = projectItems[itemIndex].getAttribute("data-category");
-    popup.querySelector(".pp-title p span").innerHTML = category.replace(
-      "-",
-      " "
-    );
-  }
+      function popupToggle() {
+        popup.classList.toggle("open");
+        header.classList.toggle("is-blurred");
+        projectSection.classList.toggle("is-blurred");
+        disableClick.classList.toggle("active");
+      }
+      function popupSlideshow() {
+        const imgSrc = screenshot[slideIndex];
+        const popupImg = popup.querySelector(".pp-img");
+        popup.querySelector(".pp-loader").classList.add("active");
+        popupImg.src = imgSrc;
+        popupImg.onload = () => {
+          popup.querySelector(".pp-loader").classList.remove("active");
+        };
+        popup.querySelector(".pp-counter").innerHTML =
+          slideIndex + 1 + " of " + screenshot.length;
+      }
 
-  function fixedBody() {
-    const scrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = "100%";
-  }
+      nextBtn.addEventListener("click", () => {
+        if (slideIndex === screenshot.length - 1) {
+          slideIndex = 0;
+        } else {
+          slideIndex++;
+        }
+        popupSlideshow();
+      });
 
-  function hiddenPopup() {
-    const scrollY = document.body.style.top;
-    document.body.style.position = "";
-    document.body.style.top = "";
-    window.scrollTo(0, parseInt(scrollY || "0") * -1);
-  }
-
-  function popupToggle() {
-    popup.classList.toggle("open");
-    header.classList.toggle("is-blurred");
-    projectSection.classList.toggle("is-blurred");
-    disableClick.classList.toggle("active");
-  }
-  function popupSlideshow() {
-    const imgSrc = screenshot[slideIndex];
-    const popupImg = popup.querySelector(".pp-img");
-    popup.querySelector(".pp-loader").classList.add("active");
-    popupImg.src = imgSrc;
-    popupImg.onload = () => {
-      popup.querySelector(".pp-loader").classList.remove("active");
-    };
-    popup.querySelector(".pp-counter").innerHTML =
-      slideIndex + 1 + " of " + screenshot.length;
-  }
-
-  nextBtn.addEventListener("click", () => {
-    if (slideIndex === screenshot.length - 1) {
-      slideIndex = 0;
-    } else {
-      slideIndex++;
-    }
-    popupSlideshow();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    if (slideIndex === 0) {
-      slideIndex = screenshot.length - 1;
-    } else {
-      slideIndex--;
-    }
-    popupSlideshow();
-  });
+      prevBtn.addEventListener("click", () => {
+        if (slideIndex === 0) {
+          slideIndex = screenshot.length - 1;
+        } else {
+          slideIndex--;
+        }
+        popupSlideshow();
+      });
+    });
 })();
 
 // CONTACT SECTION AND SEND EMAIL
