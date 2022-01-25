@@ -80,8 +80,7 @@
   });
 })();
 
-// portfolio filer and popup
-
+// PORTFOLIO FILTER AND POPUP
 (() => {
   const header = document.querySelector(".header");
   const projectSection = document.querySelector(".projects-section");
@@ -222,6 +221,7 @@
   });
 })();
 
+// CONTACT SECTION AND SEND EMAIL
 (() => {
   let name = document.querySelector(".name");
   let email = document.querySelector(".email");
@@ -259,6 +259,109 @@
       text: "Something went wrong, message could not be sent !",
     });
   }
+})();
+
+// COURSES SECTION
+(() => {
+  const coursesItemContainer = document.querySelector(
+    ".courses-slider-container"
+  );
+  const slideWidth = coursesItemContainer.offsetWidth;
+  const prevBtn = document.querySelector(".courses-slider-nav .prev");
+  const nextBtn = document.querySelector(".courses-slider-nav .next");
+
+  fetch("https://portfolio-vio.herokuapp.com/certificates/")
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        alert(res.status);
+      }
+    })
+    .then((data) => {
+      const coursesItem = [];
+      const iconLeft = [];
+      const iconRight = [];
+      const coursesTitle = [];
+      const desc = [];
+      const image = [];
+      const issuedDate = [];
+
+      for (let i = 0; i < data.certificates.length; i++) {
+        coursesItem[i] = document.createElement("div");
+        coursesItem[i].className = "courses-item";
+        if (i == 0) {
+          coursesItem[i].classList.add("active");
+        }
+        coursesItem[i].style.width = slideWidth + "px";
+        /* ICON ELEMENT */
+        iconLeft[i] = document.createElement("i");
+        iconLeft[i].classList.add("fas", "fa-quote-left", "left");
+        iconRight[i] = document.createElement("i");
+        iconRight[i].classList.add("fas", "fa-quote-right", "right");
+        /* TITLE ELEMENT */
+        coursesTitle[i] = document.createElement("h3");
+        coursesTitle[i].classList.add("courses-item-title");
+        coursesTitle[i].innerHTML = data.certificates[i]["name"];
+        /* DESC ELEMENT */
+        desc[i] = document.createElement("h4");
+        desc[i].innerHTML = data.certificates[i]["description"];
+        /* IMAGE ELEMENT */
+        image[i] = document.createElement("img");
+        image[i].src = data.certificates[i]["image"];
+        image[i].alt = "certificates";
+        /* ISSUED ELEMENT */
+        issuedDate[i] = document.createElement("p");
+        issuedDate[i].classList.add("courses-item-info");
+        issuedDate[i].innerHTML =
+          "Issued Date - " + data.certificates[i]["issued_date"];
+        /* APPEND ELEMENT */
+        coursesItemContainer.appendChild(coursesItem[i]);
+        coursesItem[i].appendChild(iconLeft[i]);
+        coursesItem[i].appendChild(iconRight[i]);
+        coursesItem[i].appendChild(coursesTitle[i]);
+        coursesItem[i].appendChild(desc[i]);
+        coursesItem[i].appendChild(image[i]);
+        coursesItem[i].appendChild(issuedDate[i]);
+      }
+      coursesItemContainer.style.width =
+        slideWidth * data.certificates.length + "px";
+
+      let activeSlide = coursesItemContainer.querySelector(
+        ".courses-item.active"
+      );
+      let slides = coursesItem.length;
+      let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(
+        activeSlide
+      );
+
+      nextBtn.addEventListener("click", () => {
+        if (slideIndex === slides - 1) {
+          slideIndex = 0;
+        } else {
+          slideIndex++;
+        }
+        slider();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        if (slideIndex === 0) {
+          slideIndex = slides - 1;
+        } else {
+          slideIndex--;
+        }
+        slider();
+      });
+      function slider() {
+        coursesItemContainer
+          .querySelector(".courses-item.active")
+          .classList.remove("active");
+        coursesItem[slideIndex].classList.add("active");
+        coursesItemContainer.style.marginLeft =
+          -(slideWidth * slideIndex) + "px";
+      }
+      slider();
+    });
 })();
 
 // HIDE ALL SECTIONS
