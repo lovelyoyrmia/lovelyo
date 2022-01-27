@@ -57,6 +57,148 @@
   });
 })();
 
+// FETCH ABOUT SECTION
+(() => {
+  const skillsContainer = document.querySelector(".skills");
+  const experienceContainer = document.querySelector(".experience");
+  const timelineEx = experienceContainer.querySelector(".timeline");
+  const educationContainer = document.querySelector(".education");
+  const timelineEd = educationContainer.querySelector(".timeline");
+
+  fetch("https://portfolio-vio.herokuapp.com/about/")
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        alert(res.status);
+      }
+    })
+    .then((data) => {
+      const skills = data.about["skills"];
+      const experience = data.about["experience"];
+      const education = data.about["education"];
+
+      const skillRow = [];
+      const skillItem = [];
+      const skillTitle = [];
+      const skillProgress = [];
+      const skillProgressBar = [];
+      const skillSpan = [];
+
+      const experienceRow = [];
+      const experienceTimelineItem = [];
+      const experienceTimelineItemInner = [];
+      const experienceSpan = [];
+      const experienceH3 = [];
+      const experienceH4 = [];
+      const experienceP = [];
+
+      const educationRow = [];
+      const educationTimelineItem = [];
+      const educationTimelineItemInner = [];
+      const educationSpan = [];
+      const educationH3 = [];
+      const educationH4 = [];
+      const educationP = [];
+
+      // SKILL SECTION
+      let index = 0;
+      for (let i = 0; i < 4; i++) {
+        skillRow[i] = document.createElement("div");
+        skillRow[i].classList.add("row");
+        for (let j = 0; j < skills.length; j++) {
+          if (j < 2) {
+            index++;
+            skillItem[index] = document.createElement("div");
+            skillItem[index].classList.add("skill-item");
+            skillTitle[index] = document.createElement("p");
+            skillTitle[index].innerHTML = skills[index - 1]["skill_title"];
+
+            skillProgress[index] = document.createElement("div");
+            skillProgress[index].classList.add("progress", "inner-shadow");
+
+            skillProgressBar[index] = document.createElement("div");
+            skillProgressBar[index].classList.add("progress-bar");
+            skillProgressBar[index].style.width = skills[index - 1]["width"];
+
+            skillSpan[index] = document.createElement("span");
+            skillSpan[index].innerHTML = skills[index - 1]["percent"];
+
+            skillRow[i].appendChild(skillItem[index]);
+            skillItem[index].appendChild(skillTitle[index]);
+            skillItem[index].appendChild(skillProgress[index]);
+            skillProgress[index].appendChild(skillProgressBar[index]);
+            skillItem[index].appendChild(skillSpan[index]);
+          }
+        }
+        skillsContainer.appendChild(skillRow[i]);
+      }
+
+      // EXPERIENCE SECTION
+      for (let i = 0; i < experience.length; i++) {
+        experienceRow[i] = document.createElement("div");
+        experienceRow[i].classList.add("row", experience[i]["row"]);
+        experienceTimelineItem[i] = document.createElement("div");
+        experienceTimelineItem[i].classList.add(
+          "timeline-item",
+          "inner-shadow"
+        );
+        experienceTimelineItemInner[i] = document.createElement("div");
+        experienceTimelineItemInner[i].classList.add(
+          "timeline-item-inner",
+          "outer-shadow"
+        );
+
+        experienceSpan[i] = document.createElement("span");
+        experienceSpan[i].innerHTML = experience[i]["date"];
+        experienceH3[i] = document.createElement("h3");
+        experienceH3[i].innerHTML = experience[i]["title"];
+        experienceH4[i] = document.createElement("h4");
+        experienceH4[i].innerHTML = experience[i]["company"];
+        experienceP[i] = document.createElement("p");
+        experienceP[i].innerHTML = experience[i]["description"];
+
+        timelineEx.appendChild(experienceRow[i]);
+        experienceRow[i].appendChild(experienceTimelineItem[i]);
+        experienceTimelineItem[i].appendChild(experienceTimelineItemInner[i]);
+        experienceTimelineItemInner[i].appendChild(experienceSpan[i]);
+        experienceTimelineItemInner[i].appendChild(experienceH3[i]);
+        experienceTimelineItemInner[i].appendChild(experienceH4[i]);
+        experienceTimelineItemInner[i].appendChild(experienceP[i]);
+      }
+
+      // EDUCATION SECTION
+      for (let i = 0; i < education.length; i++) {
+        educationRow[i] = document.createElement("div");
+        educationRow[i].classList.add("row", education[i]["row"]);
+        educationTimelineItem[i] = document.createElement("div");
+        educationTimelineItem[i].classList.add("timeline-item", "inner-shadow");
+        educationTimelineItemInner[i] = document.createElement("div");
+        educationTimelineItemInner[i].classList.add(
+          "timeline-item-inner",
+          "outer-shadow"
+        );
+
+        educationSpan[i] = document.createElement("span");
+        educationSpan[i].innerHTML = education[i]["date"];
+        educationH3[i] = document.createElement("h3");
+        educationH3[i].innerHTML = education[i]["student_title"];
+        educationH4[i] = document.createElement("h4");
+        educationH4[i].innerHTML = education[i]["school_name"];
+        educationP[i] = document.createElement("p");
+        educationP[i].innerHTML = education[i]["description"];
+
+        timelineEd.appendChild(educationRow[i]);
+        educationRow[i].appendChild(educationTimelineItem[i]);
+        educationTimelineItem[i].appendChild(educationTimelineItemInner[i]);
+        educationTimelineItemInner[i].appendChild(educationSpan[i]);
+        educationTimelineItemInner[i].appendChild(educationH3[i]);
+        educationTimelineItemInner[i].appendChild(educationH4[i]);
+        educationTimelineItemInner[i].appendChild(educationP[i]);
+      }
+    });
+})();
+
 // ABOUT SECTION TAB
 (() => {
   const aboutSection = document.querySelector(".about-section");
