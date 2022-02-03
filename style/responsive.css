@@ -53,10 +53,10 @@
     left: 30px;
   }
   .about-section .experience-line {
-    height: 150vh;
+    height: 100%;
   }
   .about-section .education-line {
-    height: 80vh;
+    height: 80%;
   }
   .about-section .timeline {
     margin-left: 40px;
