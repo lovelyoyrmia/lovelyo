@@ -161,6 +161,7 @@ ABOUT
   flex: 0 0 100%;
   max-width: 100%;
   margin: 20px auto;
+  position: relative;
 }
 
 .about-section .education,
@@ -171,7 +172,6 @@ ABOUT
 .about-section .timeline .row .timeline-item {
   width: calc(50% - 40px);
   padding: 1rem;
-  position: relative;
 }
 
 /* .timeline .row .timeline-item::after {
@@ -189,16 +189,9 @@ ABOUT
   width: 4px;
   background-color: var(--bg-black-100);
   border-radius: 10px;
+  height: 100%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.about-section .experience-line {
-  height: 100%;
-}
-
-.about-section .education-line {
-  height: 65%;
 }
 
 .about-section .timeline .row-1 {
