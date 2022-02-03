@@ -51,7 +51,12 @@
   }
   .about-section .center-line {
     left: 30px;
-    height: 100%;
+  }
+  .about-section .experience-line {
+    height: 150vh;
+  }
+  .about-section .education-line {
+    height: 80vh;
   }
   .about-section .timeline {
     margin-left: 40px;

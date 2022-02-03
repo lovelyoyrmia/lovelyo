@@ -186,12 +186,19 @@ ABOUT
 
 .about-section .center-line {
   position: absolute;
-  height: 80%;
   width: 4px;
   background-color: var(--bg-black-100);
   border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.about-section .experience-line {
+  height: 125vh;
+}
+
+.about-section .education-line {
+  height: 65%;
 }
 
 .about-section .timeline .row-1 {
