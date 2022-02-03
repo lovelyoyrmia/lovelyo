@@ -50,16 +50,11 @@
     margin-bottom: 20px;
   }
   .about-section .center-line {
-    left: 30px;
-  }
-  .about-section .experience-line {
+    left: 10px;
     height: 100%;
   }
-  .about-section .education-line {
-    height: 80%;
-  }
   .about-section .timeline {
-    margin-left: 40px;
+    padding-left: 40px;
   }
   .about-section .timeline-item {
     margin-bottom: 40px;
