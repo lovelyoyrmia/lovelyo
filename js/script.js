@@ -234,7 +234,7 @@
   const servicesSection = document.querySelector(".service-section");
   const servicesContainer = servicesSection.querySelector(".container");
   try {
-    fetch("http://localhost:8000/services/")
+    fetch("https://portfolio-vio.herokuapp.com/services/")
       .then((res) => {
         if (res.ok) {
           return res.json();
