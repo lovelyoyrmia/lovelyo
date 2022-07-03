@@ -234,7 +234,7 @@
   const servicesSection = document.querySelector(".service-section");
   const servicesContainer = servicesSection.querySelector(".container");
   try {
-    fetch("https://portfolio-vio.herokuapp.com/services/")
+    fetch("http://localhost:8000/services/")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -268,7 +268,11 @@
           serviceIconContainer[i] = document.createElement("div");
           serviceIconContainer[i].classList.add("icon", "inner-shadow");
           serviceIcon[i] = document.createElement("i");
-          serviceIcon[i].classList.add("fas", service[i]["icon"]);
+          if (i == 3) {
+            serviceIcon[i].classList.add("fab", service[i]["icon"]);
+          } else {
+            serviceIcon[i].classList.add("fas", service[i]["icon"]);
+          }
           serviceTitle[i] = document.createElement("h3");
           serviceTitle[i].innerHTML = service[i]["title"];
           serviceDescription[i] = document.createElement("p");
