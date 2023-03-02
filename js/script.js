@@ -66,7 +66,7 @@
   const timelineEd = educationContainer.querySelector(".timeline");
 
   try {
-    fetch("https://portfolio-vio.herokuapp.com/about/")
+    fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/about/")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -234,7 +234,7 @@
   const servicesSection = document.querySelector(".service-section");
   const servicesContainer = servicesSection.querySelector(".container");
   try {
-    fetch("https://portfolio-vio.herokuapp.com/services/")
+    fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/services/")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -296,7 +296,7 @@
   const projectItems = document.querySelector(".row.project-items");
 
   try {
-    fetch("https://portfolio-vio.herokuapp.com/projects/")
+    fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/projects/")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -604,7 +604,7 @@
   const prevBtn = document.querySelector(".courses-slider-nav .prev");
   const nextBtn = document.querySelector(".courses-slider-nav .next");
 
-  fetch("https://portfolio-vio.herokuapp.com/certificates/")
+  fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/certificates/")
     .then((res) => {
       if (res.ok) {
         return res.json();
