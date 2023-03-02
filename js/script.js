@@ -66,7 +66,7 @@
   const timelineEd = educationContainer.querySelector(".timeline");
 
   try {
-    fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/about/")
+    fetch("./json/portfolio.json")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -234,7 +234,7 @@
   const servicesSection = document.querySelector(".service-section");
   const servicesContainer = servicesSection.querySelector(".container");
   try {
-    fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/services/")
+    fetch("./json/portfolio.json")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -296,7 +296,7 @@
   const projectItems = document.querySelector(".row.project-items");
 
   try {
-    fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/projects/")
+    fetch("./json/portfolio.json")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -555,7 +555,7 @@
   }
 })();
 
-// CONTACT SECTION AND SEND EMAIL
+// CONTACT SECTION
 (() => {
   let name = document.querySelector(".name");
   let email = document.querySelector(".email");
@@ -571,14 +571,8 @@
       sendEmail();
     }
   });
+
   function sendEmail() {
-    emailjs.send("service_96qi7vo", "template_glk9wge", {
-      from_name: name.value,
-      to_name: "Vio",
-      message: message.value,
-      from_email: email.value,
-      to_email: "viomokalu@gmail.com",
-    });
     success();
   }
   function success() {
@@ -604,7 +598,7 @@
   const prevBtn = document.querySelector(".courses-slider-nav .prev");
   const nextBtn = document.querySelector(".courses-slider-nav .next");
 
-  fetch("http://ec2-18-141-174-30.ap-southeast-1.compute.amazonaws.com/certificates/")
+  fetch("./json/portfolio.json")
     .then((res) => {
       if (res.ok) {
         return res.json();

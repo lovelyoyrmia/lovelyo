@@ -1,0 +1,488 @@
+{
+  "about": {
+    "skills": [
+      {
+        "id": 1,
+        "skill_title": "Fundamentals Python",
+        "width": "calc(90% - 14px)",
+        "percent": "95%"
+      },
+      {
+        "id": 2,
+        "skill_title": "Computer Vision",
+        "width": "calc(85% - 14px)",
+        "percent": "90%"
+      },
+      {
+        "id": 3,
+        "skill_title": "HTML, CSS, Javascript",
+        "width": "calc(85% - 14px)",
+        "percent": "90%"
+      },
+      {
+        "id": 4,
+        "skill_title": "Machine Learning",
+        "width": "calc(80% - 14px)",
+        "percent": "85%"
+      },
+      {
+        "id": 5,
+        "skill_title": "SQL, NO SQL",
+        "width": "calc(80% - 14px)",
+        "percent": "85%"
+      },
+      {
+        "id": 6,
+        "skill_title": "React Js",
+        "width": "calc(70% - 14px)",
+        "percent": "75%"
+      },
+      {
+        "id": 7,
+        "skill_title": "Firebase",
+        "width": "calc(70% - 14px)",
+        "percent": "75%"
+      },
+      {
+        "id": 8,
+        "skill_title": "Flutter",
+        "width": "calc(70% - 14px)",
+        "percent": "75%"
+      }
+    ],
+    "experience": [
+      {
+        "id": 1,
+        "date": "Feb, 2023 - Present",
+        "title": "Backend Developer",
+        "company": "Investo Medika Asia",
+        "description": "Work with team to develop APIs and website services using Django. Created some features that can be used by talasemia community, and merchants",
+        "row": "row-1"
+      },
+      {
+        "id": 2,
+        "date": "Nov, 2022 - Present",
+        "title": "Core Team (Academic)",
+        "company": "Gunadarma I/O",
+        "description": "Become a mentor to share knowledge related to Machine Learning and Software Engineering. Work with a team to create a competitve programming event",
+        "row": "row-2"
+      },
+      {
+        "id": 3,
+        "date": "Nov, 2022 - Feb 2023",
+        "title": "Software Engineer Intern",
+        "company": "Feedloop",
+        "description": "Work with different teams to build POC/Prototype for client's needs. Created templates and logic flow for POC. Collaborated with and Mentored by Co-Founder to develop apps using Cloud Function, Javascript, and ReactJs.",
+        "row": "row-1"
+      },
+      {
+        "id": 4,
+        "date": "Feb, 2022 - Nov 2022",
+        "title": "Machine Learning Data Entry Internship",
+        "company": "Finku (Financial Start-up)",
+        "description": "Managing and labeling data using PPOCRLabel. Automate labeled data using Python, and Google Sheet. Pulled data from customers through Linkedin and checked if customers have a Linkedin Account. Helped Customer Experience team to pull data from customers who get rewards from Finku.",
+        "row": "row-2"
+      },
+      {
+        "id": 5,
+        "date": "Feb, 2022 - Jul 2022",
+        "title": "Machine Learning Trainee",
+        "company": "Bangkit 2022 Academy led by Google, Traveloka, Gojek & Tokopedia",
+        "description": "Had a good understanding of  Basic Machine Learning Algorithms to Advanced. Designed prediction models using Deep Learning (Image Classification, NLP, Time Series) in Tensorflow. Lead a team to build an Application that will predict Indonesian Food using Image Classification Algorithms and Transfer Learning.",
+        "row": "row-1"
+      },
+      {
+        "id": 6,
+        "date": "Sep, 2021 - Present",
+        "title": "Software Developer",
+        "company": "Self-Employed",
+        "description": "Developing APIs using Express Js, Django, Flask",
+        "row": "row-2"
+      },
+      {
+        "id": 7,
+        "date": "Sep, 2021 - Nov, 2021",
+        "title": "A Volunteer Teacher",
+        "company": "Perintis School",
+        "description": "Giving An Education to street kids who don't have money to school.",
+        "row": "row-1"
+      },
+      {
+        "id": 8,
+        "date": "June, 2021 - June, 2022",
+        "title": "Multimedia Team",
+        "company": "GPIB Bethania",
+        "description": "Handling Youtube live streaming for worshipping at church. Editing video and Designing logo.",
+        "row": "row-2"
+      }
+    ],
+    "education": [
+      {
+        "id": 1,
+        "date": "Sep, 2019 - Present",
+        "student_title": "Bachelor's Degree",
+        "school_name": "Gunadarma University, West Java, Indonesia",
+        "description": "Currently still majoring in Computer Science",
+        "row": "row-1"
+      },
+      {
+        "id": 2,
+        "date": "June, 2016 - July, 2019",
+        "student_title": "Senior High School",
+        "school_name": "Saint Anthony, Jakarta, Indonesia",
+        "description": "Senior High School in Science",
+        "row": "row-2"
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": 1,
+      "icon": "fa-robot",
+      "title": "Machine Learning Engineer",
+      "description": "Building machine learning models with tensorflow and python."
+    },
+    {
+      "id": 2,
+      "icon": "fa-server",
+      "title": "Full Stack Developer",
+      "description": "Building web application with python and express js."
+    },
+    {
+      "id": 3,
+      "icon": "fa-code",
+      "title": "Frontend Developer",
+      "description": "Developing web application with React Js, HTML, CSS and Javascript."
+    },
+    {
+      "id": 4,
+      "icon": "fa-android",
+      "title": "Android Developer",
+      "description": "Developing android application with Flutter and Firebase."
+    },
+    {
+      "id": 5,
+      "icon": "fa-video",
+      "title": "Video Editor",
+      "description": "Editing Video with Adobe Premiere Pro and Wondershare Filmora."
+    },
+    {
+      "id": 6,
+      "icon": "fa-music",
+      "title": "Producer",
+      "description": "Producing music with different genres such as RnB, Pop, Orchestra, Hip-Hop, and Future Bass."
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "name": "Alibaba Cloud",
+      "description": "Landing AI Developer Asia Forward",
+      "image": "https://i.ibb.co/2qhh710/e-Certificate-Alibaba-Cloud-Asia-Forward.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 2,
+      "name": "Alibaba Cloud",
+      "description": "Getting Started with Python",
+      "image": "https://i.ibb.co/7yV82bn/e-Ceritficate-Alibaba-Cloud-Getting-Started-with-python-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 3,
+      "name": "Alibaba Cloud",
+      "description": "Advanced Python Programming",
+      "image": "https://i.ibb.co/vhddvk2/e-Certificate-Alibaba-Cloud-Advanced-Python-Programming.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 4,
+      "name": "Alibaba Cloud",
+      "description": "Flask Framework",
+      "image": "https://i.ibb.co/0GXyCZT/e-Certificate-Alibaba-Cloud-Flask-Framework.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 5,
+      "name": "Amazon Web Services",
+      "description": "Data Analytics",
+      "image": "https://i.ibb.co/dGmhtn9/e-Certificate-AWS-Training-Data-Analytics-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 6,
+      "name": "Amazon Web Services",
+      "description": "Machine Learning Terminology And Process",
+      "image": "https://i.ibb.co/HP4BWXt/e-Certificate-AWS-Training-Machine-Learning-Terminology-and-Process-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 7,
+      "name": "Amazon Web Services",
+      "description": "ML Building Blocks Services And Terminology",
+      "image": "https://i.ibb.co/bmjyMw3/e-Certificate-AWS-Training-ML-Building-Blocks-Services-and-Terminology-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 8,
+      "name": "Google",
+      "description": "The Fundamentals of Digital Marketing",
+      "image": "https://i.ibb.co/C8kzGVh/e-Certificate-Google-Digital-Marketing-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 9,
+      "name": "Google Developer Student Clubs",
+      "description": "Recommendation System with Tensorflow",
+      "image": "https://i.ibb.co/0DYVJPj/e-Certificate-GDSC-UG-Recommendations-System-with-Tensorflow-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 10,
+      "name": "Rakamin Academy",
+      "description": "Data Science - Excellent Grade",
+      "image": "https://i.ibb.co/3rvB3nZ/e-Certificate-Data-Science-101-Excellent-grade-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 11,
+      "name": "Rakamin Academy",
+      "description": "Data Science 101",
+      "image": "https://i.ibb.co/jyK7LcQ/e-Certificate-Data-Science-Completion-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 12,
+      "name": "Kaggle",
+      "description": "Computer Vision",
+      "image": "https://i.ibb.co/mNc6MHt/Lovelyo-Yeremia-Mokalu-Computer-Vision.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 13,
+      "name": "Kaggle",
+      "description": "Intermediate Machine Learning",
+      "image": "https://i.ibb.co/CzLQc3z/Lovelyo-Yeremia-Mokalu-Intermediate-Machine-Learning.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 14,
+      "name": "Kaggle",
+      "description": "Intro To Machine Learning",
+      "image": "https://i.ibb.co/xmN5P2N/Lovelyo-Yeremia-Mokalu-Intro-to-Machine-Learning.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 15,
+      "name": "Haltev",
+      "description": "Digital Career",
+      "image": "https://i.ibb.co/tBFXJYD/e-Certificate-Digital-Carrer-Lovelyo-Yeremia-Mokalu-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 16,
+      "name": "Alterra",
+      "description": "Javascript 101",
+      "image": "https://i.ibb.co/rvVqXR9/e-Certificate-Javascript-101-Lovelyo-Yeremia-Mokalu-1.png",
+      "issued_date": 2021
+    },
+    {
+      "id": 17,
+      "name": "Kominfo Indonesia",
+      "description": "Literasi Digital",
+      "image": "https://i.ibb.co/ChbxfD4/e-Certificate-Kominfo-Literasi-Digital-1.png",
+      "issued_date": 2021
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "project_name": "Image Processing",
+      "category": "machine-learning",
+      "image_path": "https://i.ibb.co/12k7RRy/1-12.png",
+      "image_list": [
+        "https://i.ibb.co/12k7RRy/1-12.png",
+        "https://i.ibb.co/27cYb0w/1-13.png",
+        "https://i.ibb.co/yBJjdRL/1-14.png",
+        "https://i.ibb.co/zhwvjkV/1-15.png",
+        "https://i.ibb.co/Fw8h6K8/1.png",
+        "https://i.ibb.co/d2tNLSQ/1-1.png",
+        "https://i.ibb.co/KWF95rd/1-2.png",
+        "https://i.ibb.co/TmY3csD/1-3.png",
+        "https://i.ibb.co/KXQjt9B/1-4.png",
+        "https://i.ibb.co/09LWH2R/1-5.png",
+        "https://i.ibb.co/3Yct4WB/1-6.png",
+        "https://i.ibb.co/rwf7cRb/1-7.png",
+        "https://i.ibb.co/CVp6BYt/1-8.png",
+        "https://i.ibb.co/V2xDJ5v/1-9.png",
+        "https://i.ibb.co/sgR8KSw/1-10.png",
+        "https://i.ibb.co/6sL3zj6/1-11.png",
+        "https://i.ibb.co/crwJ2gz/1-16.png",
+        "https://i.ibb.co/Sv9w3ty/1-17.png"
+      ],
+      "description": "This website will be able to process the image that you've uploaded such as contrast, brightness, blurring, and gray-scale. Also you can detect faces and smiles, and cartoonize your image.",
+      "date": "2021",
+      "tools": "Python, Streamlit, OpenCv Python",
+      "link_web": "https://bit.ly/3qupYOq"
+    },
+    {
+      "id": 2,
+      "project_name": "Face Mask Detector",
+      "category": "machine-learning",
+      "image_path": "https://i.ibb.co/HrmLcQh/2.png",
+      "image_list": [
+        "https://i.ibb.co/HrmLcQh/2.png",
+        "https://i.ibb.co/r09nvkX/2-1.png",
+        "https://i.ibb.co/M1qdMkq/2-2.png"
+      ],
+      "description": "These days we all are using mask just because of Covid 19. This website to detect whether your image is using mask or not by using Computer Vision and Deep Learning Algorithm.",
+      "date": "2021",
+      "tools": "Python, Google Colab, Streamlit, OpenCV Python,Tensorflow",
+      "link_web": "https://bit.ly/342cG45"
+    },
+    {
+      "id": 3,
+      "project_name": "Movie Recommendations",
+      "category": "machine-learning",
+      "image_path": "https://i.ibb.co/j4kF0nw/3.png",
+      "image_list": [
+        "https://i.ibb.co/j4kF0nw/3.png",
+        "https://i.ibb.co/W01Tx0h/3-1.png"
+      ],
+      "description": "This website gives you recommendations that are similar what you're looking for.",
+      "date": "2021",
+      "tools": "Python, Google Colab, Streamlit, Tensorflow",
+      "link_web": "https://bit.ly/3JQQjiL"
+    },
+    {
+      "id": 4,
+      "project_name": "Olympic Analysis",
+      "category": "web-application",
+      "image_path": "https://i.ibb.co/64q6km7/4.png",
+      "image_list": [
+        "https://i.ibb.co/64q6km7/4.png",
+        "https://i.ibb.co/X4MP9HG/4-1.png",
+        "https://i.ibb.co/JmjRr68/4-2.png",
+        "https://i.ibb.co/0Kwk6Wx/4-3.png",
+        "https://i.ibb.co/HqbPd8F/4-4.png"
+      ],
+      "description": "Analyzed data from Olympics Event to see how many participants were attending the event.",
+      "date": "2021",
+      "tools": "Python, Google Colab, Streamlit",
+      "link_web": "https://bit.ly/3ngEM2t"
+    },
+    {
+      "id": 5,
+      "project_name": "Age Predictor",
+      "category": "machine-learning",
+      "image_path": "https://i.ibb.co/rv18Nf4/5.png",
+      "image_list": [
+        "https://i.ibb.co/rv18Nf4/5.png",
+        "https://i.ibb.co/938v48x/5-1.png"
+      ],
+      "description": "Age predictor app using streamlit. You can upload your photo and the system will be predicting how old you are.",
+      "date": "2021",
+      "tools": "Python, Google Colab, Streamlit, OpenCV Python,Tensorflow.",
+      "link_web": "https://bit.ly/3ezj2d8"
+    },
+    {
+      "id": 6,
+      "project_name": "Gojek Driver Predictor",
+      "category": "machine-learning",
+      "image_path": "https://i.ibb.co/FDYsYTn/12.png",
+      "image_list": [
+        "https://i.ibb.co/FDYsYTn/12.png",
+        "https://i.ibb.co/58v41dm/12-1.png",
+        "https://i.ibb.co/NtWnFJx/12-2.png"
+      ],
+      "description": "This website shows prediction whether your image is a Gojek Driver or not a Gojek Driver",
+      "date": "2021",
+      "tools": "Python, Flask, Tflite, Repl.co",
+      "link_web": "https://hour-of-code-advanced-skeleton.lovelyomokalu.repl.co/"
+    },
+    {
+      "id": 7,
+      "project_name": "Jarvis Voice Assistant",
+      "category": "others",
+      "image_path": "https://i.ibb.co/Y0gS0tQ/6.png",
+      "image_list": ["https://i.ibb.co/Y0gS0tQ/6.png"],
+      "description": "I built this app was actually to help me do some task, such as open up google, vscode, spotify, youtube, and so on. Tools i use are Speech Recognition and Voice engine from python.",
+      "date": "2021",
+      "tools": "Python, NASA API, Speech Recognition",
+      "link_web": "https://github.com/lovelyoyrmia/jarvis-voice-assistant"
+    },
+    {
+      "id": 8,
+      "project_name": "Speech Recognition News",
+      "category": "web-application",
+      "image_path": "https://i.ibb.co/MG6SP82/7.png",
+      "image_list": [
+        "https://i.ibb.co/MG6SP82/7.png",
+        "https://i.ibb.co/z8MqKLq/7-1.png",
+        "https://i.ibb.co/Nnq39XP/7-2.png"
+      ],
+      "description": "This website will help you search for recently News with speech recognition. Also you can search for different News based on categories, terms, and others.",
+      "date": "2021",
+      "tools": "React Js, Alan Studio, News API, Firebase, Material UI.",
+      "link_web": "https://alan-ai-app.web.app/"
+    },
+    {
+      "id": 9,
+      "project_name": "Flappy Bird Game Clone",
+      "category": "game",
+      "image_path": "https://i.ibb.co/FxmCqh9/8.png",
+      "image_list": [
+        "https://i.ibb.co/FxmCqh9/8.png",
+        "https://i.ibb.co/HNxtyGD/8-1.png",
+        "https://i.ibb.co/2K6VY0h/8-2.png"
+      ],
+      "description": "Game that was inspired by flappy bird game on Android and i built this game to practice my knowledge in Javascript.",
+      "date": "2021",
+      "tools": "HTML, CSS, Javascript, Firebase.",
+      "link_web": "https://flappybird-lovelyo.web.app/"
+    },
+    {
+      "id": 10,
+      "project_name": "Dino Game Chrome Clone",
+      "category": "game",
+      "image_path": "https://i.ibb.co/2g6BrZQ/9.png",
+      "image_list": [
+        "https://i.ibb.co/2g6BrZQ/9.png",
+        "https://i.ibb.co/bLc83f5/9-1.png",
+        "https://i.ibb.co/pz3zFVR/9-2.png"
+      ],
+      "description": "Game that was inspired by Dino game on Google Chrome and i built this game to practice my knowledge in Javascript.",
+      "date": "2021",
+      "tools": "HTML, CSS, Javascript, Firebase.",
+      "link_web": "https://dinogame-lovelyo-29.web.app/"
+    },
+    {
+      "id": 11,
+      "project_name": "Face Detection Js",
+      "category": "web-application",
+      "image_path": "https://i.ibb.co/PZ3Gwxc/10.png",
+      "image_list": [
+        "https://i.ibb.co/PZ3Gwxc/10.png",
+        "https://i.ibb.co/9tbSVLF/10-1.png"
+      ],
+      "description": "One of React Js web application that i built to detect faces using Face-API Js. You can drag and drop photo that you want to detect.",
+      "date": "2021",
+      "tools": "React Js, Face-API Js, Firebase.",
+      "link_web": "https://face-detection-app-5eb0f.web.app/"
+    },
+    {
+      "id": 12,
+      "project_name": "Covid Tracker",
+      "category": "web-application",
+      "image_path": "https://i.ibb.co/RvZq2TS/11.png",
+      "image_list": [
+        "https://i.ibb.co/RvZq2TS/11.png",
+        "https://i.ibb.co/V9LyfWD/11-1.png"
+      ],
+      "description": "My first web application that i learned from youtube. This website can be tracking data Covid-19 in this world.",
+      "date": "2021",
+      "tools": "React Js, Firebase.",
+      "link_web": "https://covid-tracker-app-395e2.web.app/"
+    }
+  ]
+}
