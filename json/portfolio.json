@@ -9,13 +9,13 @@
       },
       {
         "id": 2,
-        "skill_title": "Computer Vision",
-        "width": "calc(85% - 14px)",
-        "percent": "90%"
+        "skill_title": "Node Js",
+        "width": "calc(90% - 14px)",
+        "percent": "95%"
       },
       {
         "id": 3,
-        "skill_title": "HTML, CSS, Javascript",
+        "skill_title": "AWS / Google Cloud",
         "width": "calc(85% - 14px)",
         "percent": "90%"
       },
