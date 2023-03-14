@@ -3,13 +3,13 @@
     "skills": [
       {
         "id": 1,
-        "skill_title": "Fundamentals Python",
+        "skill_title": "Backend Python (Django, Flask)",
         "width": "calc(90% - 14px)",
         "percent": "95%"
       },
       {
         "id": 2,
-        "skill_title": "Node Js",
+        "skill_title": "Node Js (Express Js)",
         "width": "calc(90% - 14px)",
         "percent": "95%"
       },
@@ -21,25 +21,25 @@
       },
       {
         "id": 4,
-        "skill_title": "Machine Learning",
+        "skill_title": "Machine Learning (Tensorflow)",
         "width": "calc(80% - 14px)",
         "percent": "85%"
       },
       {
         "id": 5,
-        "skill_title": "SQL, NO SQL",
+        "skill_title": "SQL (Postgresql, MySql, Oracle)",
         "width": "calc(80% - 14px)",
         "percent": "85%"
       },
       {
         "id": 6,
-        "skill_title": "React Js",
+        "skill_title": "React Js / Next Js",
         "width": "calc(70% - 14px)",
         "percent": "75%"
       },
       {
         "id": 7,
-        "skill_title": "Firebase",
+        "skill_title": "No SQL (Firestore)",
         "width": "calc(70% - 14px)",
         "percent": "75%"
       },
@@ -138,21 +138,21 @@
   "services": [
     {
       "id": 1,
+      "icon": "fa-server",
+      "title": "Backend Developer",
+      "description": "Developing APIs with Django/Flask, Express Js, SQL / No SQL, and AWS / GCP."
+    },
+    {
+      "id": 2,
       "icon": "fa-robot",
       "title": "Machine Learning Engineer",
       "description": "Building machine learning models with tensorflow and python."
     },
     {
-      "id": 2,
-      "icon": "fa-server",
-      "title": "Full Stack Developer",
-      "description": "Building web application with python and express js."
-    },
-    {
       "id": 3,
       "icon": "fa-code",
       "title": "Frontend Developer",
-      "description": "Developing web application with React Js, HTML, CSS and Javascript."
+      "description": "Developing web application with React Js / Next Js, HTML, CSS and Javascript."
     },
     {
       "id": 4,
