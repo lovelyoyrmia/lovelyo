@@ -573,7 +573,9 @@
   });
 
   function sendEmail() {
-    success();
+    // success();
+    const mail = `mailto:${email.value}?subject=New Message from ${name.value}&body=${message.value}`;
+    window.location.href = mail;
   }
   function success() {
     swal({
