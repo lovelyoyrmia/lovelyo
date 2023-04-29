@@ -37,10 +37,9 @@ Home
   font-weight: 700;
   color: var(--text-black-700);
   margin: 0;
-  overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid;
-  width: 0;
+  width: 100%;
   animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
 }
 
@@ -49,11 +48,14 @@ Home
   font-weight: 600;
   color: var(--text-black-600);
   margin: 0;
-  overflow: hidden;
+  opacity: 0;
   white-space: nowrap;
   border-right: 2px solid;
-  width: 0;
-  animation: typing 3s steps(30, end) forwards, blinking 1s infinite;
+  width: 100%;
+  animation: typing2 3s steps(30, end) forwards, blinking 1s infinite;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .home-section .home-img .img-box {
@@ -70,8 +72,31 @@ Home
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 2px solid;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes typing2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 2px solid;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
 }
 
 @keyframes blinking {
