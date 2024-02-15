@@ -15,37 +15,37 @@
       },
       {
         "id": 3,
-        "skill_title": "AWS / Google Cloud",
+        "skill_title": "Golang (GRPC)",
         "width": "calc(85% - 14px)",
         "percent": "90%"
       },
       {
         "id": 4,
+        "skill_title": "Flutter",
+        "width": "calc(85% - 14px)",
+        "percent": "90%"
+      },
+      {
+        "id": 5,
+        "skill_title": "AWS / Google Cloud",
+        "width": "calc(85% - 14px)",
+        "percent": "90%"
+      },
+      {
+        "id": 6,
         "skill_title": "Machine Learning (Tensorflow)",
         "width": "calc(80% - 14px)",
         "percent": "85%"
       },
       {
-        "id": 5,
-        "skill_title": "SQL (Postgresql, MySql, Oracle)",
+        "id": 7,
+        "skill_title": "SQL (Postgresql, MySql) & No SQL (Firestore)",
         "width": "calc(80% - 14px)",
         "percent": "85%"
       },
       {
-        "id": 6,
-        "skill_title": "React Js / Next Js",
-        "width": "calc(70% - 14px)",
-        "percent": "75%"
-      },
-      {
-        "id": 7,
-        "skill_title": "No SQL (Firestore)",
-        "width": "calc(70% - 14px)",
-        "percent": "75%"
-      },
-      {
         "id": 8,
-        "skill_title": "Flutter",
+        "skill_title": "React Js / Next Js",
         "width": "calc(70% - 14px)",
         "percent": "75%"
       }
@@ -54,7 +54,7 @@
       {
         "id": 1,
         "date": "Feb, 2023 - Present",
-        "title": "Backend Developer",
+        "title": "Fullstack Developer",
         "company": "Investo Medika Asia",
         "description": "Work with team to develop APIs and website services using Django. Created some features that can be used by talasemia community, and merchants",
         "row": "row-1"
