@@ -14,6 +14,11 @@ CONTACT SECTION
   display: flex;
 }
 
+.contact-section .contact-btn {
+  border: none;
+  cursor: pointer;
+}
+
 .contact-section .contact-item-inner {
   padding: 30px 15px;
   text-align: center;
