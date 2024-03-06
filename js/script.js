@@ -561,6 +561,9 @@
   let email = document.querySelector(".email");
   let message = document.querySelector(".message");
   let submit = document.querySelector(".submit");
+  let contactWA = document.querySelector(".contact-wa");
+  let contactEmail = document.querySelector(".contact-email");
+  let contactAddrs = document.querySelector(".contact-addrs");
 
   submit.addEventListener("click", (event) => {
     event.preventDefault();
@@ -568,13 +571,31 @@
     if (name.value === "" || email.value === "" || message.value === "") {
       errorMessage();
     } else {
-      sendEmail();
+      let subject = `New Message from ${name.value}`
+      let msg = `FROM: ${email.value}%0D%0ANAME: ${name.value}%0D%0AMESSAGE: ${message.value}`
+      sendEmail(subject, msg);
     }
   });
 
-  function sendEmail() {
-    // success();
-    const mail = `mailto:${email.value}?subject=New Message from ${name.value}&body=${message.value}`;
+  contactWA.addEventListener("click", (_) => {
+    sendWA();
+  })
+
+  contactEmail.addEventListener("click", (_) => {
+    sendEmail('', '')
+  })
+
+  contactAddrs.addEventListener("click", (_) => {
+    window.location.href = "http://maps.google.com/?q=Cawang, Jakarta"
+  })
+
+  function sendWA() {
+    window.location.href = "https://wa.me/+6285813501033"
+  }
+
+  function sendEmail(subject, msg) {
+    const toEmail = 'mokalulovelyo@gmail.com'
+    const mail = `mailto:${toEmail}?subject=${subject}&body=${msg}`;
     window.location.href = mail;
   }
   function success() {
