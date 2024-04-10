@@ -15,7 +15,7 @@
       },
       {
         "id": 3,
-        "skill_title": "Golang (GRPC)",
+        "skill_title": "Golang",
         "width": "calc(85% - 14px)",
         "percent": "90%"
       },
@@ -53,15 +53,15 @@
     "experience": [
       {
         "id": 1,
-        "date": "Feb, 2023 - Present",
-        "title": "Fullstack Developer",
+        "date": "Feb, 2023 - May, 2024",
+        "title": "Software Engineer",
         "company": "Investo Medika Asia",
         "description": "Work with team to develop APIs and website services using Django. Created some features that can be used by talasemia community, and merchants",
         "row": "row-1"
       },
       {
         "id": 2,
-        "date": "Nov, 2022 - Present",
+        "date": "Nov, 2022 - Nov, 2023",
         "title": "Core Team (Academic)",
         "company": "Gunadarma I/O",
         "description": "Become a mentor to share knowledge related to Machine Learning and Software Engineering. Work with a team to create a competitve programming event",
@@ -119,10 +119,10 @@
     "education": [
       {
         "id": 1,
-        "date": "Sep, 2019 - Present",
+        "date": "Sep, 2019 - Sep, 2023",
         "student_title": "Bachelor's Degree",
         "school_name": "Gunadarma University, West Java, Indonesia",
-        "description": "Currently still majoring in Computer Science",
+        "description": "Majored in Computer Science",
         "row": "row-1"
       },
       {
