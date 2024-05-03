@@ -9,15 +9,15 @@
       },
       {
         "id": 2,
-        "skill_title": "Node Js (Express Js)",
+        "skill_title": "Golang",
         "width": "calc(90% - 14px)",
         "percent": "95%"
       },
       {
         "id": 3,
-        "skill_title": "Golang",
-        "width": "calc(85% - 14px)",
-        "percent": "90%"
+        "skill_title": "Node Js",
+        "width": "calc(90% - 14px)",
+        "percent": "95%"
       },
       {
         "id": 4,
@@ -39,7 +39,7 @@
       },
       {
         "id": 7,
-        "skill_title": "SQL (Postgresql, MySql) & No SQL (Firestore)",
+        "skill_title": "SQL & No SQL",
         "width": "calc(80% - 14px)",
         "percent": "85%"
       },
@@ -53,11 +53,19 @@
     "experience": [
       {
         "id": 1,
+        "date": "May, 2024 - Present",
+        "title": "Software Engineer",
+        "company": "Bank Raya Indonesia",
+        "description": "Work with team to develop APIs services using Golang.",
+        "row": "row-1"
+      },
+      {
+        "id": 2,
         "date": "Feb, 2023 - May, 2024",
         "title": "Software Engineer",
         "company": "Investo Medika Asia",
         "description": "Work with team to develop APIs and website services using Django. Created some features that can be used by talasemia community, and merchants",
-        "row": "row-1"
+        "row": "row-2"
       },
       {
         "id": 2,
@@ -65,7 +73,7 @@
         "title": "Core Team (Academic)",
         "company": "Gunadarma I/O",
         "description": "Become a mentor to share knowledge related to Machine Learning and Software Engineering. Work with a team to create a competitve programming event",
-        "row": "row-2"
+        "row": "row-1"
       },
       {
         "id": 3,
@@ -73,7 +81,7 @@
         "title": "Software Engineer Intern",
         "company": "Feedloop",
         "description": "Work with different teams to build POC/Prototype for client's needs. Created templates and logic flow for POC. Collaborated with and Mentored by Co-Founder to develop apps using Cloud Function, Javascript, and ReactJs.",
-        "row": "row-1"
+        "row": "row-2"
       },
       {
         "id": 4,
@@ -81,7 +89,7 @@
         "title": "Machine Learning Data Entry Internship",
         "company": "Finku (Financial Start-up)",
         "description": "Managing and labeling data using PPOCRLabel. Automate labeled data using Python, and Google Sheet. Pulled data from customers through Linkedin and checked if customers have a Linkedin Account. Helped Customer Experience team to pull data from customers who get rewards from Finku.",
-        "row": "row-2"
+        "row": "row-1"
       },
       {
         "id": 5,
@@ -89,7 +97,7 @@
         "title": "Machine Learning Trainee",
         "company": "Bangkit 2022 Academy led by Google, Traveloka, Gojek & Tokopedia",
         "description": "Had a good understanding of  Basic Machine Learning Algorithms to Advanced. Designed prediction models using Deep Learning (Image Classification, NLP, Time Series) in Tensorflow. Lead a team to build an Application that will predict Indonesian Food using Image Classification Algorithms and Transfer Learning.",
-        "row": "row-1"
+        "row": "row-2"
       },
       {
         "id": 6,
@@ -97,7 +105,7 @@
         "title": "Software Developer",
         "company": "Self-Employed",
         "description": "Developing APIs using Express Js, Django, Flask",
-        "row": "row-2"
+        "row": "row-1"
       },
       {
         "id": 7,
@@ -105,7 +113,7 @@
         "title": "A Volunteer Teacher",
         "company": "Perintis School",
         "description": "Giving An Education to street kids who don't have money to school.",
-        "row": "row-1"
+        "row": "row-2"
       },
       {
         "id": 8,
@@ -113,7 +121,7 @@
         "title": "Multimedia Team",
         "company": "GPIB Bethania",
         "description": "Handling Youtube live streaming for worshipping at church. Editing video and Designing logo.",
-        "row": "row-2"
+        "row": "row-1"
       }
     ],
     "education": [
